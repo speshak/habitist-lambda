@@ -32,7 +32,7 @@ functions:
     handler: habits.main
     memorySize: 128
     events:
-      - schedule: rate(1 day)
+      - schedule: cron(30 7 * * ? *)
     environment:
       TODOIST_APIKEY: ${ssm:/TodoistApiKey~true}
 
